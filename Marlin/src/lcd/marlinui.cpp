@@ -459,7 +459,7 @@ constexpr uint8_t epps = ENCODER_PULSES_PER_STEP;
   ///////////// Keypad Handling //////////////
   ////////////////////////////////////////////
 
-  #if IS_RRW_KEYPAD && HAS_ENCODER_ACTION
+  #if ENABLED(IS_RRW_KEYPAD) && HAS_ENCODER_ACTION
 
     volatile uint8_t MarlinUI::keypad_buttons;
 
