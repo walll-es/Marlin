@@ -29,7 +29,7 @@
 #if HAS_ENCODER_WHEEL || ANY_BUTTON(ENC, BACK, UP, DWN, LFT, RT)
   #define HAS_DIGITAL_BUTTONS 1
 #endif
-#if !HAS_ADC_BUTTONS && (IS_RRW_KEYPAD || (HAS_WIRED_LCD && !IS_NEWPANEL))
+#if !HAS_ADC_BUTTONS && (ENABLED(IS_RRW_KEYPAD) || (HAS_WIRED_LCD && !IS_NEWPANEL))
   #define HAS_SHIFT_ENCODER 1
 #endif
 
@@ -117,7 +117,7 @@
   #endif
 #endif
 
-#if IS_RRW_KEYPAD
+#if ENABLED(IS_RRW_KEYPAD)
   #define BTN_OFFSET          0 // Bit offset into buttons for shift register values
 
   #define BLEN_KEYPAD_F3      0
